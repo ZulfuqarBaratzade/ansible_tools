@@ -7,7 +7,7 @@
     db_password: Passw0rd
   tasks:
     - name: Install dependencies
-      apt: name={{ item }} state=present
+      apt: name={{ item }} state=installed
       with_items:
        - python
        - python-setuptools
@@ -19,7 +19,7 @@
     - name: Install MySQL database
       apt:
         name: "{{ item }}"
-        state:  present
+        state:  installed
       with_items:
        - mysql-server
        - mysql-client

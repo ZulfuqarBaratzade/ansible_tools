@@ -1,3 +1,2 @@
-db_and_web_server ansible_connection=ssh ansible_ssh_pass=Passw0rd ansible_host=IPv4
-
+db_and_web_server
 
