@@ -22,4 +22,7 @@
         name: mysql
         state: started
         enabled: yes
-
+    - name: create applicaiton database
+      mysql_db:
+        name: employee_db
+        state: present
