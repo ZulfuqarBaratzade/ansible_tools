@@ -1,2 +1,5 @@
 ansible_ssh_pass: Passw0rd
 ansible_host: IPv4
+db_name: employee_db
+db_user: db_user
+db_password: Passw0rd

@@ -1,10 +1,6 @@
 -
   name: Deploy a web application
   hosts: db_and_web_server
-  vars:
-    db_name: employee_db
-    db_user: db_user
-    db_password: Passw0rd
   tasks:
     - name: Install dependencies
       apt: name={{ item }} state=installed
@@ -33,7 +29,6 @@
     - name: Create Application Database
       mysql_db: name={{ db_name }} state=present
 
-
     - name: Create Application DB User
       mysql_user: name={{ db_user }} password={{ db_password }} priv='*.*:ALL' host='%' state='present'
 
@@ -50,3 +45,4 @@
 
     - name: Start web-application
       shell: FLASK_APP=/opt/app.py nohup flask run --host=0.0.0.0 &
+      
