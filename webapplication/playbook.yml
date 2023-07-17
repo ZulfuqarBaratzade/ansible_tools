@@ -12,5 +12,10 @@
         - build-essential
         - python-pip
         - python-mysqldb
-        
+    - name: Install Mysql dependencies
+      apt: name='{{item}}' state=present
+      with_items:
+        - mysql-server
+        - mysql-client
+
 
