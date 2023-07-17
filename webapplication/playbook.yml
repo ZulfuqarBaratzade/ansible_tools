@@ -35,4 +35,5 @@
       with_items:
       - flask
       - flask-mysql
-      
+    - name: Copy web-sercer code
+      copy: src=app.py dest=/opt/app.py
