@@ -28,3 +28,11 @@
         state: present
     - name: Create Application DB User
       mysql_user: name='db_user' password='Passw0rd' priv='*.*:ALL' host='%' state='present'
+    - name: Install Python Flask Dependencies
+      pip:
+        name: '{{item}}'
+        state: present
+      with_items:
+      - flask
+      - flask-mysql
+      
