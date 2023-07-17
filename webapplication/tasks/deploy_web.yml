@@ -1,4 +1,5 @@
-- name: Install Python Flask dependencies
+
+    - name: Install Python Flask dependencies
       pip:
         name: '{{ item }}'
         state: present
